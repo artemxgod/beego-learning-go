@@ -10,14 +10,14 @@
     * backend services
 - It is based on MVC architecture
 
-## MVC architecture
+### MVC architecture
 
 - `M.V.C.` stands for model, view and controller
 - `Model` corresponds to all the data related logic
 - `View` is used for UI logic of the app
 - `Controller` contains the business logic
 
-## Simple application using beego
+### Simple application using beego
 
 ```go
 package main
@@ -30,3 +30,10 @@ func main() {
 	web.Run()
 }
 ```
+
+- Without any configuration server will be initiated on localhost:8000
+- And we will receive a following message in console: 'init global config instance failed. If you do not use this, just ignore it.  open conf/app.conf: The system cannot find the path specified'
+
+### Installing bee tool
+
+    go install github.com/beego/bee/v2@latest
