@@ -31,7 +31,7 @@ func main() {
 }
 ```
 
-- Without any configuration server will be initiated on localhost:8000
+- Without any configuration server will be initiated on localhost:8080
 - And we will receive a following message in console: 'init global config instance failed. If you do not use this, just ignore it.  open conf/app.conf: The system cannot find the path specified'
 
 ### Installing bee tool
@@ -39,6 +39,14 @@ func main() {
     go install github.com/beego/bee/v2@latest
 
 - This tool allows us to create architecture for our app. Simply run:
+
 ```cmd
     $ bee new <application_name>
 ```
+
+- run go mod tidy and then run the app
+```cmd
+    $ go mod tidy
+    $ bee run
+```
+- visit `localhost:8080` to check the app
