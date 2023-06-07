@@ -39,5 +39,6 @@ func main() {
     go install github.com/beego/bee/v2@latest
 
 - This tool allows us to create architecture for our app. Simply run:
-
+```bash
     $ bee new <Application_name>
+```
