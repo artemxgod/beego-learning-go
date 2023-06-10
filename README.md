@@ -72,34 +72,34 @@ func main() {
 - Example:
 
 ```go
-    func (hello *MainController) SayHello() {
-    // setting template name
-	hello.TplName = "hello.html"
-    //setting a variable to controller.Data map
-	hello.Data["name"] = "Alex"
+func (hello *MainController) SayHello() {
+// setting template name
+hello.TplName = "hello.html"
+//setting a variable to controller.Data map
+hello.Data["name"] = "Alex"
 }
 ```
 
 ```html
-    <!-- hello.html -->
-    <h2>Hello Golang from {{.name}}</h2>
+<!-- hello.html -->
+<h2>Hello Golang from {{.name}}</h2>
 ```
 
 - Change syntax for variable using:
 ```go
-    // main.go
-    beego.BConfig.WebConfig.TemplateLeft = "<<<"
-	beego.BConfig.WebConfig.TemplateRight = ">>>"
+// main.go
+beego.BConfig.WebConfig.TemplateLeft = "<<<"
+beego.BConfig.WebConfig.TemplateRight = ">>>"
 ```
--- `<<<>>>` will replace `{{}}` syntax
+- `<<<>>>` will replace `{{}}` syntax
 
 
 - Change `/views` path to custom:
 ```go
-    // main.go
-    beego.AddViewPath("path_name")
+// main.go
+beego.AddViewPath("path_name")
 
-    // and add path in controller's method
+// and add path in controller's method
 
-    controller.ViewPath = "path_name"
+controller.ViewPath = "path_name"
 ```
