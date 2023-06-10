@@ -50,3 +50,16 @@ func main() {
     $ bee run
 ```
 - visit `localhost:8080` to check the app
+
+
+## Layout
+
+- `/conf` - contains basic configuration of the application
+- `/controllers` - can specify your own controllers. controllers manage backend pages and implement features
+- `/models` - contains data models for db
+- `/routers` - allows to create routes for web application
+- `/static` - keeps static files like .css .js and images
+- `/tests` - testing application methods
+- `/views` .html .tmp files
+
+- [!] beego restarts server after modification
