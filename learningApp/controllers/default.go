@@ -21,7 +21,8 @@ func (c *MainController) Get() {
 
 // outputs hello world
 func (hello *MainController) SayHello() {
-	// hello is a receiver
+	// pass variable from controller to template
+	hello.Data["name"] = "Alex"
 	// setting template name for receiver
 	hello.TplName = "hello.html"
 	// we then create a template in /view with all the contect

@@ -60,6 +60,27 @@ func main() {
 - `/routers` - allows to create routes for web application
 - `/static` - keeps static files like .css .js and images
 - `/tests` - testing application methods
-- `/views` .html .tmp files
+- `/views` template files
 
 - [!] beego restarts server after modification
+
+### template parsing 
+
+- To pass variable from controller to template
+    * Set variable in controller
+    * parse it in the template
+- Example:
+
+```go
+    func (hello *MainController) SayHello() {
+    // setting template name
+	hello.TplName = "hello.html"
+    //setting a variable to controller.Data map
+	hello.Data["name"] = "Alex"
+}
+```
+
+```html
+    <!-- hello.html -->
+    <h2>Hello Golang from {{.name}}</h2>
+```
