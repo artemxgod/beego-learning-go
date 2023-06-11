@@ -28,3 +28,13 @@ func (hello *MainController) SayHello() {
 	// we then create a template in /view with all the contect
 	// and now we can use this template in router
 }
+
+func (c *MainController) GetHome() {
+	c.TplName = "home.html"
+}
+
+// name must be Error + error code
+func (c *MainController) Error404() {
+	c.Data["error"] = "This page is not found"
+	c.TplName = "404.html"
+}

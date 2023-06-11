@@ -103,3 +103,11 @@ beego.AddViewPath("path_name")
 
 controller.ViewPath = "path_name"
 ```
+
+### Errors
+
+- You can define a special handler for an specified error code using:
+    * `ErrorHandler(code, handler)` if you define handler
+    * `ErrorController(controller)` if you define controller method
+
+- [!] Controller's method name should match form: "Error + error code". Example: `Error404()` otherwise it won't be recognised properly
